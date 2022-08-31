@@ -1,4 +1,4 @@
-#CommonPHP Core Library
+# CommonPHP Core Library
 
 _Version 1.0_
 
@@ -6,7 +6,7 @@ CommonPHP is an open-source web application framework built for use in future co
 
 We're going to jump topics before diving further into the purpose of this library. To skip to the purpose, go to the [More information](#markdown-header-more-information) section 
 
-##Installation
+## Installation
 
 Installation can either be done by downloading this project and including the individual files, however, it was intended to use composer to install this library
 
@@ -14,7 +14,7 @@ Installation can either be done by downloading this project and including the in
 composer install commonphp/core 
 ``` 
 
-##Usage
+## Usage
 
 The assumption is made that this project is being used from composer. If that's not the case, all PHP files in the library (namely the ones intended to be used) need to be manually included.
 
@@ -25,7 +25,7 @@ $injector = new \CommonPHP\Core\Injector();
 
 Once the injector is created, that single object should either exist in your primary application class or be passed between various classes in your application. Any class that you intend to use as a Service, or want to be able to inject dependencies into, should be created from this instance.
 
-###Services
+### Services
 
 Service classes, used with the Injector component, are singleton enforced classes meaning that only a single instance of the class can exist.
 
@@ -58,7 +58,7 @@ standaloneFilesystemExample(new Filesystem());
 
 As you can see in the example, the call made to ```serviceFileSystem``` will return true because of the Injector providing that Filesystem object. Alternatively, ```standaloneFilesystemExample``` returns false because a fresh instance of the Filesystem component was created for that function.
 
-###Custom Injectors
+### Custom Injectors
 
 As mentioned later, one of the goals of this frameworks is modularity. For that reason, most things can be customized, including having a custom injector.
 
@@ -82,7 +82,7 @@ While this is a very simple example of a custom injector, the ```check``` method
 - CoreInjector: Automatically injects any of service libraries that exist in the Core library
 - ServiceInjector: automatically inject any class that has the ```#[Service]``` Attribute
 
-## More Information ##
+## More Information
 
 Just to note, this isn't to say that other frameworks are bad, quite the contrary. Other application frameworks have some definitively powerful features, but, depending on the purpose, they can be slightly too complex for different types of projects
 
@@ -92,7 +92,7 @@ There are three primary goals for the development and future of CommonPHP:
 - **Modular**: Other than the Core library, the plan is to split out major components of the framework into their own separate library. This is so that a smaller project, that may not need 80% of the framework, only loads the 20% that is required.
 - **Easy to Use**: As mentioned previously, the purpose of this framework is to conform to a different way of thought and code. The hope here is that the end-product for CommonPHP will result in a collection of commonly used PHP classes, that are easy to understand and use, without having to rely intimately on the documentation or code builders to build a simple or complex application 
 
-##The Core Library
+## The Core Library
 
 This specific library, the "Core" library, is the base library in the suite (and the first to be released). This library contains all the conceivable components that would be used in every dependent library and application. These components include:
 
@@ -106,11 +106,11 @@ This specific library, the "Core" library, is the base library in the suite (and
 - **ServiceManager**: Enforces a singleton-type pattern on marked classes (as long as they're instantiated from the Injector component) so that only a single instance of such a class would be created and shared
 - **Validator**: Allows for validation of properties on a provided class.
 
-##More documentation and Contributions
+## More documentation and Contributions
 
 Honestly, we just kind of wanted to get this framework out there for review. This is the start of our contribution to the open-source world, so we hope it's a worthy contribution! 
 
 That being said, we're still working on writing the documentation for this library, and the rest of the framework. Feel free to review this library and pull requests are always welcome! For major changes, please open an issue first to discuss what you'd like to change. Additionally, please update any tests where applicable.
 
-##License
+## License
 [GPL 3.0](https://opensource.org/licenses/gpl-3.0.html)
