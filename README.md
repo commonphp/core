@@ -11,7 +11,7 @@ We're going to jump topics before diving further into the purpose of this librar
 Installation can either be done by downloading this project and including the individual files, however, it was intended to use composer to install this library
 
 ```bash
-composer install commonphp/core 
+composer install commonphptlm/core 
 ``` 
 
 ## Usage
