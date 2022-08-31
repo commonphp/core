@@ -1,6 +1,7 @@
 {
   "name": "comphp/core",
   "type": "library",
+  "version": "1.0",
   "description": "Core common functionality shared within PHP Web Applications",
   "license": "GPL-3.0-or-later",
   "require": {
